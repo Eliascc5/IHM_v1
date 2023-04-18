@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="6.3499999mm"
+   height="6.3499999mm"
+   viewBox="0 0 6.3499999 6.3499999"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="icon_Logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.2913967"
+     inkscape:cx="1.4173951"
+     inkscape:cy="19.843532"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7828" />
+  <defs
+     id="defs2">
+    <rect
+       x="-11.75973"
+       y="-6.1471314"
+       width="68.42025"
+       height="51.983353"
+       id="rect7818" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.4217155,-0.50000004)">
+    <path
+       style="fill:#000000;stroke-width:0.264583"
+       d="M 13.011428,14.708571 C 27.154285,16.782857 41.297142,18.857143 55.44,20.931428"
+       id="path72" />
+    <g
+       id="g1056"
+       transform="rotate(180,4.9996398,5.025535)">
+      <g
+         id="g3382"
+         transform="rotate(180,4.9996398,5.025535)">
+        <g
+           id="g7814"
+           transform="translate(-1.0941341,0.53035714)">
+          <g
+             id="g7828"
+             transform="rotate(180,6.093774,4.4951779)">
+            <path
+               id="rect346"
+               style="opacity:0.94;fill:#ffff00;fill-opacity:1;stroke-width:0.16801"
+               d="m 1.4966984,9.0207129 3.175,-6.35 -3.175,0.7296712 -3.175,-0.7296712 z m 0,-0.79375 -2.38124996,-4.7625 2.38124996,0.5472534 2.38125,-0.5472534 z" />
+          </g>
+          <text
+             xml:space="preserve"
+             transform="matrix(0.26458333,0,0,0.26458333,1.5682389,-0.45446194)"
+             id="text7816"
+             style="font-size:18.8976px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;white-space:pre;shape-inside:url(#rect7818);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.13386;paint-order:markers fill stroke" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
