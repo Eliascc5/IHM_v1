@@ -760,75 +760,11 @@ color: rgb(255, 255, 255);</string>
           </item>
          </layout>
         </widget>
-        <widget class="QPushButton" name="znButton">
-         <property name="geometry">
-          <rect>
-           <x>200</x>
-           <y>150</y>
-           <width>50</width>
-           <height>50</height>
-          </rect>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-background-repeat: no-repeat;
-	background-image: url(:/resources/resources/35arrowdown.png);
-background-position: center;
-
-border-radius: 1px;
-}
- QPushButton:checked{
-background-repeat: no-repeat;
-background-position: center;
-	background-image: url(:/resources/resources/35arrowdown.png);
-border-radius: 1px;
- }
-</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="zpButton">
-         <property name="geometry">
-          <rect>
-           <x>200</x>
-           <y>90</y>
-           <width>50</width>
-           <height>50</height>
-          </rect>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-background-repeat: no-repeat;
-	background-image: url(:/resources/resources/35arrowupp.png);
-background-position: center;
-
-border-radius: 1px;
-}
- QPushButton:checked{
-background-repeat: no-repeat;
-background-position: center;
-	background-image: url(:/resources/resources/35arrowupp.png);
-border-radius: 1px;
- }
-</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
         <widget class="QLabel" name="label_17">
          <property name="geometry">
           <rect>
            <x>280</x>
-           <y>50</y>
+           <y>30</y>
            <width>171</width>
            <height>16</height>
           </rect>
@@ -849,7 +785,7 @@ border-radius: 1px;
          <property name="geometry">
           <rect>
            <x>250</x>
-           <y>70</y>
+           <y>50</y>
            <width>341</width>
            <height>31</height>
           </rect>
@@ -973,7 +909,7 @@ border-radius: 1px;
          <property name="geometry">
           <rect>
            <x>280</x>
-           <y>110</y>
+           <y>90</y>
            <width>161</width>
            <height>16</height>
           </rect>
@@ -994,7 +930,7 @@ border-radius: 1px;
          <property name="geometry">
           <rect>
            <x>250</x>
-           <y>130</y>
+           <y>120</y>
            <width>341</width>
            <height>31</height>
           </rect>
@@ -1054,6 +990,82 @@ background-image:  url(:/resources/resources/send_Button.svg);
 border-radius: 1px;
  }
 
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="verticalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>110</y>
+           <width>41</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="zpButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-repeat: no-repeat;
+	background-image: url(:/resources/resources/35arrowupp.png);
+background-position: center;
+
+border-radius: 1px;
+}
+ QPushButton:checked{
+background-repeat: no-repeat;
+background-position: center;
+	background-image: url(:/resources/resources/35arrowupp.png);
+border-radius: 1px;
+ }
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="znButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-repeat: no-repeat;
+	background-image: url(:/resources/resources/35arrowdown.png);
+background-position: center;
+
+border-radius: 1px;
+}
+ QPushButton:checked{
+background-repeat: no-repeat;
+background-position: center;
+	background-image: url(:/resources/resources/35arrowdown.png);
+border-radius: 1px;
+ }
 </string>
             </property>
             <property name="text">
