@@ -100,26 +100,6 @@ void MainWindow::on_connectButton_clicked()
 
     m_serialThread.start(); //ejecuta la funcion run
 
-    qDebug()<<"estoy acaaaaaaaaaaa";
-
-    /*
-
-    portOpened = m_serialThread.getFlag_Open_Close();
-
-    qDebug()<<"portOpened"<<portOpened;
-
-    if(!portOpened){
-        ui->textBrowser->setTextColor(Qt::red);
-        ui->textBrowser->append("Something went wrong, try again!");
-    }
-    else {
-        ui->textBrowser->setTextColor(Qt::green);
-        ui->textBrowser->append("Connected!");
-
-        code = "\n";
-        codeSize = code.size();
-    }
-    */
 
 }
 
@@ -132,6 +112,11 @@ void MainWindow::updateLabel(QString label)
         ui->textBrowser->append(label);
         code = "\n";
         codeSize = code.size();
+    }else if (label=="Disconnected")
+    {
+        portOpened = m_serialThread.getFlag_Open_Close();
+        ui->textBrowser->setTextColor(Qt::red);
+        ui->textBrowser->append(label);
     }
     else {
         portOpened = m_serialThread.getFlag_Open_Close();
@@ -505,3 +490,9 @@ void MainWindow::on_quitButton_clicked()
 {
     this->close();
 }
+
+void MainWindow::on_disconnectButton_clicked()
+{
+    m_serialThread.stopThread();
+}
+

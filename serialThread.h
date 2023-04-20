@@ -93,11 +93,14 @@ protected:
             qDebug() << "Error al abrir el puerto serial";
             return;
         }else{
+            serialPortOpened = true;
             emit stateChanged("Connected");
-            serialPortOpened = true;}
+            }
 
         while (true) {
             if (m_quit) {
+                serialPortOpened = false;
+                emit stateChanged("Disconnected");
                 break;
             }
             if (m_serial.waitForReadyRead(2000)) { // Esperar un segundo a que lleguen datos por el puerto serial
