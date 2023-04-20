@@ -455,6 +455,24 @@ color: rgb(255, 255, 255);</string>
             </widget>
            </item>
            <item>
+            <widget class="QPushButton" name="disconnectButton">
+             <property name="minimumSize">
+              <size>
+               <width>85</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(104, 130, 170);
+border-radius: 5px;
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Disconnect</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <spacer name="horizontalSpacer_3">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>

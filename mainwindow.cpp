@@ -16,6 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     QMainWindow::setFixedSize(700, 650);
 
+    connect(&m_serialThread, &SerialThread::dataReceived, this, &MainWindow::receiveMessage);
+    connect(&m_serialThread, &SerialThread::stateChanged, this, &MainWindow::updateLabel);
     // Ports
 
     QList<QString> stringPorts = m_serialThread.getAvailablePorts();
@@ -98,6 +100,10 @@ void MainWindow::on_connectButton_clicked()
 
     m_serialThread.start(); //ejecuta la funcion run
 
+    qDebug()<<"estoy acaaaaaaaaaaa";
+
+    /*
+
     portOpened = m_serialThread.getFlag_Open_Close();
 
     qDebug()<<"portOpened"<<portOpened;
@@ -112,12 +118,30 @@ void MainWindow::on_connectButton_clicked()
 
         code = "\n";
         codeSize = code.size();
-
-        connect(&m_serialThread, &SerialThread::dataReceived, this, &MainWindow::receiveMessage);
-
     }
+    */
 
 }
+
+
+void MainWindow::updateLabel(QString label)
+{
+    if(label =="Connected"){
+        portOpened = m_serialThread.getFlag_Open_Close();
+        ui->textBrowser->setTextColor(Qt::green);
+        ui->textBrowser->append(label);
+        code = "\n";
+        codeSize = code.size();
+    }
+    else {
+        portOpened = m_serialThread.getFlag_Open_Close();
+        ui->textBrowser->setTextColor(Qt::red);
+        ui->textBrowser->append("Something went wrong, try again!");
+
+
+    }
+}
+
 
 void MainWindow::receiveMessage(const QByteArray &dataFromMCU)
 {

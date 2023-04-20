@@ -56,21 +56,29 @@ public:
 
     void writeData(const QByteArray &datos) {
 
-        QMutexLocker locker(&m_mutex);
         m_serial.write(datos);
     }
 
+
     ~SerialThread() override
     {
-        m_mutex.lock();
-        m_quit = true;
-        m_mutex.unlock();
+
         wait();
     }
 
 signals:
     void dataReceived(const QByteArray &data);
+    void stateChanged(QString label);
 
+public slots:
+
+    void stopThread()
+    {
+        m_mutex.lock();
+        m_quit = true;
+        m_mutex.unlock();
+
+    };
 
 protected:
     void run() override
@@ -81,10 +89,12 @@ protected:
 
         if (!m_serial.open(QIODevice::ReadWrite)) {
             serialPortOpened = false;
-
-            //qDebug() << "Error al abrir el puerto serial";
+            emit stateChanged("Error");
+            qDebug() << "Error al abrir el puerto serial";
             return;
-        }else{serialPortOpened = true;}
+        }else{
+            emit stateChanged("Connected");
+            serialPortOpened = true;}
 
         while (true) {
             if (m_quit) {

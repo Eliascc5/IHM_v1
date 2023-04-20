@@ -13,6 +13,8 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QCoreApplication>
 #include "serialThread.h"
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -43,6 +45,8 @@ private slots:
     void on_connectButton_clicked();
 
     void receiveMessage(const QByteArray &dataFromMCU);
+
+    void updateLabel(QString newState);
 
     void on_sendTrameButton_clicked();
 
