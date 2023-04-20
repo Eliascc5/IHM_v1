@@ -90,7 +90,7 @@ protected:
         if (!m_serial.open(QIODevice::ReadWrite)) {
             serialPortOpened = false;
             emit stateChanged("Error");
-            qDebug() << "Error al abrir el puerto serial";
+            //qDebug() << "Error al abrir el puerto serial";
             return;
         }else{
             serialPortOpened = true;

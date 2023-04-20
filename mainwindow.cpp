@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(&m_serialThread, &SerialThread::dataReceived, this, &MainWindow::receiveMessage);
     connect(&m_serialThread, &SerialThread::stateChanged, this, &MainWindow::updateLabel);
+    portOpened=false;
     // Ports
 
     QList<QString> stringPorts = m_serialThread.getAvailablePorts();
@@ -106,6 +107,7 @@ void MainWindow::on_connectButton_clicked()
 
 void MainWindow::updateLabel(QString label)
 {
+
     if(label =="Connected"){
         portOpened = m_serialThread.getFlag_Open_Close();
         ui->textBrowser->setTextColor(Qt::green);
@@ -157,6 +159,8 @@ void MainWindow::on_sendTrameButton_clicked()
     if(!portOpened){
         //TODO: AGREGAR QMESSAGEBOX CON WARNING
         QMessageBox msgBox;
+        msgBox.setWindowTitle("Warning");
+        msgBox.setIcon(QMessageBox::Warning);
         msgBox.setText("The serial port is NOT connected!");
         msgBox.exec();
     }
@@ -471,14 +475,24 @@ void MainWindow::on_openFileButton_clicked()
 
 void MainWindow::on_sendFileButton_clicked()
 {
-    if(fileOpened){
+    if(fileOpened && portOpened){
+        qDebug()<<"e"<<fileOpened;
+        qDebug()<<"e1"<<portOpened;
         m_serialThread.writeData((pointXYZ[counterLines]+"\r").toUtf8());
         this->ui->textBrowser->append(pointXYZ[counterLines]);
         if (pointXYZ[counterLines]=="0\n"){
             counterLines=0;
             this->ui->textBrowser->append("EOF reached.\n");
         }else{counterLines++;}
-    }else{this->ui->textBrowser->append("File is not open.\n");}
+    }else{
+
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Warning");
+        msgBox.setIcon(QMessageBox::Warning);
+        msgBox.setText("Something went wrong. Please verify if the file has been opened and if the port is connected");
+        msgBox.exec();
+
+    }
 
 
 
@@ -488,6 +502,8 @@ void MainWindow::on_sendFileButton_clicked()
 
 void MainWindow::on_quitButton_clicked()
 {
+    m_serialThread.stopThread();
+
     this->close();
 }
 
