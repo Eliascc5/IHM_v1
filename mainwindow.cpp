@@ -29,6 +29,13 @@ MainWindow::MainWindow(QWidget *parent)
 
     /*Configuration of QCustomPlot*/
 
+    QBrush backgroundBrush(QColor(104, 130, 170));
+    this->ui->velProfilePlot->setBackground(backgroundBrush);
+
+
+
+
+
     //Create Rectangle Area and add to QCustomplot
     QCPAxisRect * R00=new QCPAxisRect(this->ui->velProfilePlot);
     QCPAxisRect * R10=new QCPAxisRect(this->ui->velProfilePlot);
@@ -72,6 +79,49 @@ MainWindow::MainWindow(QWidget *parent)
     R30->insetLayout()->addElement(arLegend30,Qt::AlignTop|Qt::AlignRight);
     arLegend30->setLayer("legend");
     arLegend30->addItem(new QCPPlottableLegendItem(arLegend30, this->ui->velProfilePlot->graph(3)));
+
+    QPen pen(Qt::red);
+    pen.setWidth(2);
+    QPen pen1(Qt::yellow);
+    pen1.setWidth(2);
+    QPen pen2(Qt::blue);
+    pen2.setWidth(2);
+    QPen pen3(Qt::green);
+    pen3.setWidth(2);
+
+    R00->axis(QCPAxis::atBottom)->setLabel("time");
+    R00->axis(QCPAxis::atLeft)->setLabel("Position");
+
+    R10->axis(QCPAxis::atBottom)->setLabel("time");
+    R10->axis(QCPAxis::atLeft)->setLabel("Velocity");
+
+    R20->axis(QCPAxis::atBottom)->setLabel("time");
+    R20->axis(QCPAxis::atLeft)->setLabel("Aceleration");
+
+    R30->axis(QCPAxis::atBottom)->setLabel("time");
+    R30->axis(QCPAxis::atLeft)->setLabel("Jerk");
+
+    QColor colorBlanco(255, 255, 255); // Definir color blanco
+
+    R00->axis(QCPAxis::atBottom)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje x de R00
+    R00->axis(QCPAxis::atLeft)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje y de R00
+
+    R10->axis(QCPAxis::atBottom)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje x de R10
+    R10->axis(QCPAxis::atLeft)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje y de R10
+
+    R20->axis(QCPAxis::atBottom)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje x de R20
+    R20->axis(QCPAxis::atLeft)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje y de R20
+
+    R30->axis(QCPAxis::atBottom)->setLabelColor(colorBlanco); // Cambiar color de etiqueta eje x de R30
+    R30->axis(QCPAxis::atLeft)->setLabelColor(colorBlanco);
+
+    // Set the new pen for the graph
+    this->ui->velProfilePlot->graph(0)->setPen(pen);
+    this->ui->velProfilePlot->graph(1)->setPen(pen1);
+    this->ui->velProfilePlot->graph(2)->setPen(pen2);
+    this->ui->velProfilePlot->graph(3)->setPen(pen3);
+
+
 
 }
 
@@ -451,7 +501,7 @@ void MainWindow::on_openFileButton_clicked()
 
         fileOpened=true;
         ui->textBrowser->setTextColor(Qt::black);
-        this->ui->textBrowser->append("the file was opened successfully");
+        this->ui->textBrowser->append("The file was opened successfully");
         counterLines=0;
         ui->dirFile->setText(fileName);
 
