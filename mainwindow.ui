@@ -942,48 +942,6 @@ color: rgb(255, 255, 255);</string>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="openFileButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>80</width>
-              <height>25</height>
-             </size>
-            </property>
-            <property name="cursor">
-             <cursorShape>PointingHandCursor</cursorShape>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton{
-background-repeat: no-repeat;
-background-position: center;
-	background-image: url(:/resources/resources/openFileIcon.svg);
-
-border-radius: 1px;
-}
- QPushButton:checked{
-background-repeat: no-repeat;
-background-position: center;
-background-image:  url(:/resources/resources/openFileIcon.svg);
-
-border-radius: 1px;
- }
-
-
-
-</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="sendFileButton">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
@@ -1016,6 +974,48 @@ background-image:  url(:/resources/resources/send_Button.svg);
 border-radius: 1px;
  }
 
+
+
+
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="openFileButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+background-repeat: no-repeat;
+background-position: center;
+	background-image: url(:/resources/resources/openFileIcon.svg);
+
+border-radius: 1px;
+}
+ QPushButton:checked{
+background-repeat: no-repeat;
+background-position: center;
+background-image:  url(:/resources/resources/openFileIcon.svg);
+
+border-radius: 1px;
+ }
 
 
 
@@ -1139,6 +1139,9 @@ border-radius: 1px;
               <width>50</width>
               <height>50</height>
              </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Commands supported :&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:h/H&lt;/span&gt; -&amp;gt;Homing&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:r/R&lt;/span&gt; -&amp;gt; Reset microcontroller&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:px&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; y&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; z&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE &lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-&amp;gt; Point in space. Replace VALUE for a point (in centimeters)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">QLabel{
