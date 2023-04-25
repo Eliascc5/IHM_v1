@@ -59,7 +59,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->ui->velProfilePlot->graph(1)->setName("Velocity");
     this->ui->velProfilePlot->graph(2)->setName("Aceleration");
     this->ui->velProfilePlot->graph(3)->setName("Jerk");
-
+    /*
     //Add Legends
     QCPLegend *arLegend00=new QCPLegend;
     R00->insetLayout()->addElement(arLegend00,Qt::AlignTop|Qt::AlignRight);
@@ -80,6 +80,7 @@ MainWindow::MainWindow(QWidget *parent)
     R30->insetLayout()->addElement(arLegend30,Qt::AlignTop|Qt::AlignRight);
     arLegend30->setLayer("legend");
     arLegend30->addItem(new QCPPlottableLegendItem(arLegend30, this->ui->velProfilePlot->graph(3)));
+    */
 
     QPen pen(Qt::red);
     pen.setWidth(2);
@@ -195,8 +196,19 @@ void MainWindow::receiveMessage(const QByteArray &dataFromMCU)
        buffer.remove(0,index+codeSize);
 
        if (traetedMessage =="done"){
+           ui->robotStatLineEdit->setText("READY");
            MainWindow::on_sendFileButton_clicked();
 
+       }else if (traetedMessage =="S1"){
+           ui->robotStatLineEdit->setText("INIT");
+       }else if (traetedMessage =="S2"){
+           ui->robotStatLineEdit->setText("READY");
+       }else if (traetedMessage =="S3"){
+           ui->robotStatLineEdit->setText("HOMING");
+       }else if (traetedMessage =="S4"){
+           ui->robotStatLineEdit->setText("WORKING");
+       }else if (traetedMessage =="S5"){
+           ui->robotStatLineEdit->setText("FAULT");
        }
     }
 

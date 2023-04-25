@@ -103,7 +103,7 @@ protected:
                 emit stateChanged("Disconnected");
                 break;
             }
-            if (m_serial.waitForReadyRead(2000)) { // Esperar un segundo a que lleguen datos por el puerto serial
+            if (m_serial.waitForReadyRead(1000)) { // Esperar TRES segundo a que lleguen datos por el puerto serial
                 QByteArray data = m_serial.readAll(); // Leer todos los datos disponibles en el puerto serial
                 emit dataReceived(data); // Emitir señal con los datos recibidos
             }

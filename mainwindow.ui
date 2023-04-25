@@ -120,6 +120,14 @@ color: rgb(255, 255, 255);</string>
              <height>25</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
            <property name="autoFillBackground">
             <bool>false</bool>
            </property>
@@ -127,6 +135,9 @@ color: rgb(255, 255, 255);</string>
             <string notr="true">background-color: rgb(91, 114, 148);
 border-radius: 5px;
 color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
            <property name="readOnly">
             <bool>true</bool>
@@ -565,6 +576,9 @@ color: rgb(255, 255, 255);</string>
           <width>641</width>
           <height>241</height>
          </rect>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(102, 102, 102);
@@ -1141,7 +1155,7 @@ border-radius: 1px;
              </size>
             </property>
             <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Commands supported :&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:h/H&lt;/span&gt; -&amp;gt;Homing&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:r/R&lt;/span&gt; -&amp;gt; Reset microcontroller&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:px&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; y&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; z&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE &lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-&amp;gt; Point in space. Replace VALUE for a point (in centimeters)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; text-decoration: underline;&quot;&gt;Commands supported&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; :&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:h/H&lt;/span&gt; -&amp;gt;Homing&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:r/R&lt;/span&gt; -&amp;gt; Reset microcontroller&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;:px&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; y&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt; z&lt;/span&gt;&lt;span style=&quot; font-weight:700; color:#ff5500;&quot;&gt;VALUE &lt;/span&gt;&lt;span style=&quot; color:#000000;&quot;&gt;-&amp;gt; Point in space. Replace VALUE for a point (in centimeters)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">QLabel{
@@ -1252,6 +1266,9 @@ border-radius: 1px;
            <width>75</width>
            <height>24</height>
           </rect>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(104, 130, 170);
