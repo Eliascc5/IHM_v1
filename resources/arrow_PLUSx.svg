@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="9.0510702mm"
-   height="9.8992796mm"
-   viewBox="0 0 9.0510702 9.8992796"
+   width="10mm"
+   height="10mm"
+   viewBox="0 0 10 10"
    version="1.1"
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="10.582793"
-     inkscape:cx="23.764992"
-     inkscape:cy="21.544406"
+     inkscape:cx="23.764993"
+     inkscape:cy="21.544407"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
@@ -52,33 +52,33 @@
          transform="rotate(180,4.9996398,5.025535)">
         <path
            id="rect346"
-           style="opacity:0.94;fill:#000000;fill-opacity:1;stroke-width:0.250446"
-           d="m 0.4741048,9.9751748 9.05107,-4.9496392 -9.05107,-4.9496404 1.0400973,4.9492796 z"
+           style="opacity:0.94;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           d="M 0.4741048,10.075895 10.474105,5.0758958 0.4741048,0.0758952 1.6232477,5.0755313 Z"
            sodipodi:nodetypes="ccccc" />
         <text
            xml:space="preserve"
-           style="font-size:3px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.3;paint-order:markers fill stroke"
-           x="2.9242296"
-           y="-4.070457"
+           style="font-size:3.26897px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.326897;paint-order:markers fill stroke"
+           x="5.9884224"
+           y="-4.0230536"
            id="text4128"
-           transform="scale(1,-1)"><tspan
+           transform="scale(0.99760912,-1.0023966)"><tspan
              sodipodi:role="line"
              id="tspan4126"
-             style="font-size:3px;fill:#ffffff;stroke-width:0.3"
-             x="2.9242296"
-             y="-4.070457">+</tspan></text>
+             style="font-size:3.26897px;fill:#ffffff;stroke-width:0.326897"
+             x="5.9884224"
+             y="-4.0230536">+</tspan></text>
         <text
            xml:space="preserve"
-           style="font-size:5px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.3;paint-order:markers fill stroke"
-           x="5.2243471"
-           y="-3.6620095"
+           style="font-size:5.56305px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.333783;paint-order:markers fill stroke"
+           x="3.9293799"
+           y="-3.616595"
            id="text4132"
-           transform="scale(1,-1)"><tspan
+           transform="scale(1.0113817,-0.98874639)"><tspan
              sodipodi:role="line"
              id="tspan4130"
-             style="font-size:5px;fill:#ffffff;stroke-width:0.3"
-             x="5.2243471"
-             y="-3.6620095">x</tspan></text>
+             style="font-size:5.56305px;fill:#ffffff;stroke-width:0.333783"
+             x="3.9293799"
+             y="-3.616595">x</tspan></text>
       </g>
     </g>
   </g>

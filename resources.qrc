@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/resources">
-        <file>resources/35arrowupp.png</file>
-        <file>resources/35arrowdown.png</file>
         <file>resources/arrow_MINUSx.svg</file>
         <file>resources/arrow_PLUSx.svg</file>
         <file>resources/arrow_PLUSy.svg</file>
@@ -10,5 +8,8 @@
         <file>resources/send_Button.svg</file>
         <file>resources/openFileIcon.svg</file>
         <file>resources/quitButton.svg</file>
+        <file>resources/arrow_PLUSz.svg</file>
+        <file>resources/arrow_MINUSz.svg</file>
+        <file>resources/infoLogo.svg</file>
     </qresource>
 </RCC>

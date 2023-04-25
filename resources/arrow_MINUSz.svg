@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   sodipodi:docname="arrow_MINUSy.svg"
+   sodipodi:docname="arrow_MINUSz.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@
      showgrid="false"
      inkscape:zoom="7.483165"
      inkscape:cx="11.692913"
-     inkscape:cy="19.911361"
+     inkscape:cy="9.2206974"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
@@ -83,22 +83,22 @@
                  y="-4.9177361">-</tspan></text>
             <text
                xml:space="preserve"
-               style="font-size:4.20127px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.252076;paint-order:markers fill stroke"
-               x="-5.2933302"
-               y="5.1834521"
-               id="text4132"
-               transform="matrix(-1.1391357,0.01347684,0.01749208,0.8776516,0,0)"><tspan
+               style="font-size:4.42133px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;text-anchor:middle;fill:#f60000;fill-rule:evenodd;stroke-width:0.442133;paint-order:markers fill stroke"
+               x="5.1355538"
+               y="5.3216128"
+               id="text844"
+               transform="scale(1.1838487,0.84470254)"><tspan
                  sodipodi:role="line"
-                 id="tspan4130"
-                 style="font-size:4.20127px;fill:#ffffff;stroke-width:0.252076"
-                 x="-5.2933302"
-                 y="5.1834521">Y</tspan></text>
+                 id="tspan842"
+                 x="5.1355538"
+                 y="5.3216128"
+                 style="fill:#ffffff;stroke-width:0.442132">Z</tspan></text>
           </g>
           <text
              xml:space="preserve"
              transform="matrix(0.26458333,0,0,0.26458333,1.5682389,-0.45446194)"
              id="text7816"
-             style="font-size:18.8976px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;white-space:pre;shape-inside:url(#rect7818);fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.13386;paint-order:markers fill stroke" />
+             style="font-size:18.8976px;font-family:Verdana;-inkscape-font-specification:Verdana;text-align:center;white-space:pre;shape-inside:url(#rect7818);display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.13386;paint-order:markers fill stroke" />
         </g>
       </g>
     </g>

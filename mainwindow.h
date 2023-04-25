@@ -78,6 +78,8 @@ private slots:
 
     void on_disconnectButton_clicked();
 
+    void on_pushButton_clicked();
+
 private:
 
     Ui::MainWindow *ui;
@@ -87,6 +89,9 @@ private:
     bool portOpened;
     QString traetedMessage;
     int counterLines;
+
+    double coordx,coordy,coordz;
+    char trameCommand[50];
 
     QString buffer;
     QString code;

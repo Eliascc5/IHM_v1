@@ -5,6 +5,7 @@
 
 
 #define nbPointsTime 100
+#define CONVERTION_CM_TO_M 1/100
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -246,6 +247,11 @@ void MainWindow::on_homingButton_clicked()
     else {
        QString message = ":h\r";
        m_serialThread.writeData(message.toUtf8());
+
+       coordx=0.0;
+       coordy=0.0;
+       coordz=-0.5208;
+
        FlagHoming = true;
 
 
@@ -257,16 +263,16 @@ void MainWindow::on_xpButton_clicked()
 {
     if(FlagHoming){
 
-        //TODO: ENVIAR TRAMA PARA MOVERSE EN X+
+        double valor = ui->lineEdit_step->text().toDouble()*CONVERTION_CM_TO_M;
+        double newcoordxp = coordx + valor;
 
-        QString aux1{":px"};
-        QString step{ui->lineEdit_step->text()};
-        QString aux2 ={"\r"};
+        sprintf(trameCommand, ":px%.3f y%.3f z%.3f", newcoordxp, coordy, coordz);
+        QString trameCommandQString = QString(trameCommand);
+        qDebug()<<trameCommandQString;
+        m_serialThread.writeData(trameCommandQString.toUtf8());
 
-        QString command = aux1+step+aux2;
+        coordx = newcoordxp; //Updating variable
 
-        qDebug()<<command;
-        m_serialThread.writeData(command.toUtf8());
     }
     else{
 
@@ -280,16 +286,16 @@ void MainWindow::on_xpButton_clicked()
 void MainWindow::on_xnButton_clicked()
 {
     if(FlagHoming){
-        //TODO: ENVIAR TRAMA PARA MOVERSE EN X-
-        QString aux1{":px"};
-        QString step{"-" + ui->lineEdit_step->text()};
-        QString aux2 ={"\r"};
 
-        QString command = aux1+step+aux2;
+        double valor = ui->lineEdit_step->text().toDouble()*CONVERTION_CM_TO_M;
+        double newcoordxn = coordx - valor;
 
-        qDebug()<<"aca abajo:\n";
-        qDebug()<<command;
-        m_serialThread.writeData(command.toUtf8());
+        sprintf(trameCommand, ":px%.3f y%.3f z%.3f", newcoordxn, coordy, coordz);
+        QString trameCommandQString = QString(trameCommand);
+        qDebug()<<trameCommandQString;
+        m_serialThread.writeData(trameCommandQString.toUtf8());
+
+        coordx = newcoordxn; //Updating variable
     }
     else{
 
@@ -304,16 +310,16 @@ void MainWindow::on_xnButton_clicked()
 void MainWindow::on_ypButton_clicked()
 {
     if(FlagHoming){
-        //TODO: ENVIAR TRAMA PARA MOVERSE EN Y+
-        QString aux1{":py"};
-        QString step{ui->lineEdit_step->text()};
-        QString aux2 ={"\r"};
 
-        QString command = aux1+step+aux2;
+        double valor = ui->lineEdit_step->text().toDouble()*CONVERTION_CM_TO_M;
+        double newcoordyp = coordy + valor;
 
-        qDebug()<<"aca abajo:\n";
-        qDebug()<<command;
-        m_serialThread.writeData(command.toUtf8());
+        sprintf(trameCommand, ":px%.3f y%.3f z%.3f", coordx, newcoordyp, coordz);
+        QString trameCommandQString = QString(trameCommand);
+        qDebug()<<trameCommandQString;
+        m_serialThread.writeData(trameCommandQString.toUtf8());
+
+        coordy = newcoordyp; //Updating variable
     }
     else{
 
@@ -327,17 +333,16 @@ void MainWindow::on_ypButton_clicked()
 void MainWindow::on_ynButton_clicked()
 {
     if(FlagHoming){
-        //TODO: ENVIAR TRAMA PARA MOVERSE EN Y-
 
-        QString aux1{":py"};
-        QString step{"-" + ui->lineEdit_step->text()};
-        QString aux2 ={"\r"};
+        double valor = ui->lineEdit_step->text().toDouble()*CONVERTION_CM_TO_M;
+        double newcoordyn = coordy - valor;
 
-        QString command = aux1+step+aux2;
+        sprintf(trameCommand, ":px%.3f y%.3f z%.3f", coordx, newcoordyn, coordz);
+        QString trameCommandQString = QString(trameCommand);
+        qDebug()<<trameCommandQString;
+        m_serialThread.writeData(trameCommandQString.toUtf8());
 
-        qDebug()<<"aca abajo:\n";
-        qDebug()<<command;
-        m_serialThread.writeData(command.toUtf8());
+        coordy = newcoordyn; //Updating variable
     }
     else{
 
@@ -351,16 +356,16 @@ void MainWindow::on_ynButton_clicked()
 void MainWindow::on_zpButton_clicked()
 {
     if(FlagHoming){
-        //TODO: ENVIAR TRAMA PARA MOVERSE EN Z+
-        QString aux1{":pz"};
-        QString step{ui->lineEdit_step->text()};
-        QString aux2 ={"\r"};
 
-        QString command = aux1+step+aux2;
+        double valor = ui->lineEdit_step->text().toDouble()*CONVERTION_CM_TO_M;
+        double newcoordzp = coordz + valor;
 
-        qDebug()<<"aca abajo:\n";
-        qDebug()<<command;
-        m_serialThread.writeData(command.toUtf8());
+        sprintf(trameCommand, ":px%.3f y%.3f z%.3f", coordx, coordy, newcoordzp);
+        QString trameCommandQString = QString(trameCommand);
+        qDebug()<<trameCommandQString;
+        m_serialThread.writeData(trameCommandQString.toUtf8());
+
+        coordz = newcoordzp; //Updating variable
     }
     else{
 
@@ -374,16 +379,15 @@ void MainWindow::on_zpButton_clicked()
 void MainWindow::on_znButton_clicked()
 {
     if(FlagHoming){
-        //TODO: ENVIAR TRAMA PARA MOVERSE EN Z-
-        QString aux1{":pz"};
-        QString step{"-" + ui->lineEdit_step->text()};
-        QString aux2 ={"\r"};
+        double valor = ui->lineEdit_step->text().toDouble()*CONVERTION_CM_TO_M;
+        double newcoordzn = coordz - valor;
 
-        QString command = aux1+step+aux2;
+        sprintf(trameCommand, ":px%.3f y%.3f z%.3f", coordx, coordy, newcoordzn);
+        QString trameCommandQString = QString(trameCommand);
+        qDebug()<<trameCommandQString;
+        m_serialThread.writeData(trameCommandQString.toUtf8());
 
-
-        qDebug()<<command;
-        m_serialThread.writeData(command.toUtf8());
+        coordz = newcoordzn; //Updating variable
     }
     else{
 
@@ -560,5 +564,13 @@ void MainWindow::on_quitButton_clicked()
 void MainWindow::on_disconnectButton_clicked()
 {
     m_serialThread.stopThread();
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString message = ":r\r";
+    m_serialThread.writeData(message.toUtf8());
+
 }
 
